@@ -36,6 +36,11 @@ li {
   font-weight: 700;
   src: url("../fonts/static/OpenSans-Bold.ttf");
 }
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 600;
+  src: url("../fonts/static/OpenSans-SemiBold.ttf");
+}
 body {
   font-family: "Open Sans";
   color: #787878;
@@ -169,5 +174,28 @@ body {
 }
 .menu__item.apply-link:hover {
   background-color: #3498db;
+}
+
+.enroll__inner {
+  display: flex;
+  justify-content: flex-start;
+}
+@media (max-width: 720px) {
+  .enroll__inner {
+    flex-direction: column;
+  }
+}
+.enroll__left {
+  min-width: 50%;
+  text-align: center;
+}
+.enroll__title {
+  font-size: 25px;
+  line-height: 35px;
+  color: #333333;
+  font-weight: 600;
+}
+.enroll__right {
+  min-width: 50%;
 }
 /*# sourceMappingURL=style.css.map */

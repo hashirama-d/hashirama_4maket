@@ -1,0 +1,26 @@
+.enroll {
+  &__inner {
+    display: flex;
+    justify-content: flex-start;
+    //flex: 1;
+    @media (max-width: 720px) {
+      flex-direction: column;
+    }
+  }
+  &__left {
+    min-width: 50%;
+    text-align: center;
+  }
+  &__title {
+    font-size: 25px;
+    line-height: 35px;
+    color: #333333;
+    font-weight: 600;
+  }
+  &__description {
+
+  }
+  &__right {
+    min-width: 50%;
+  }
+}

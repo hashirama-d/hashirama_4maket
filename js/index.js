@@ -1,5 +1,6 @@
 const menuBtn = document.querySelector(".menu__btn");
-const menuList = document.querySelector(".menu__list")
+const menuList = document.querySelector(".menu__list");
+const menuLinks = document.querySelectorAll(".menu__item-link");
 
 //  Тригер кнопки для бургер-меню
 menuBtn.addEventListener("click", () => {
@@ -8,10 +9,10 @@ menuBtn.addEventListener("click", () => {
 });
 
 //  Поведінка для посилань у меню
-document.addEventListener('click', function(event) {
-    if (event.target.matches('a[href^="#"]')) {
+menuLinks.forEach( menuLink => {
+    menuLink.addEventListener("click", event => {
         event.preventDefault();
-        menuList.classList.toggle("menu__list_enabled");  // При натисканні на посилання меню закривається
+        menuList.classList.remove("menu__list_enabled");  // При натисканні на посилання меню закривається
         let target = document.querySelector(event.target.getAttribute('href'));
 
         window.scrollTo({
@@ -19,5 +20,5 @@ document.addEventListener('click', function(event) {
             top: target.offsetTop - document.querySelector(".placeholder").offsetHeight,
             behavior: 'smooth' // Optional: Add smooth scrolling behavior
         });
-    }
-});
+    })
+})
