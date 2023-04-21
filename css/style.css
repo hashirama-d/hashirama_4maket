@@ -26,6 +26,19 @@ li {
   text-decoration: none;
 }
 
+input {
+  border-color: transparent;
+  outline: none;
+  opacity: 1;
+  color: #000000;
+}
+input::-moz-placeholder {
+  opacity: 1;
+}
+input::placeholder {
+  opacity: 1;
+}
+
 @font-face {
   font-family: "Open Sans";
   font-weight: 400;
@@ -239,5 +252,22 @@ body {
 }
 .enroll__right {
   min-width: 50%;
+}
+.enroll__form-input {
+  border: 1px solid #bababa;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #999999;
+}
+.enroll__form-input[type=text], .enroll__form-input[type=tel], .enroll__form-input[type=email] {
+  height: 50px;
+  width: 100%;
+}
+.enroll__form-input::-moz-placeholder {
+  font-family: "Open Sans";
+}
+.enroll__form-input::placeholder {
+  font-family: "Open Sans";
 }
 /*# sourceMappingURL=style.css.map */

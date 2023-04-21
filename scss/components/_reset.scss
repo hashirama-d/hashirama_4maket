@@ -20,3 +20,12 @@ nav, ul{
 li {
   text-decoration: none;
 }
+input {
+  border-color: transparent;
+  outline: none;
+  opacity: 1;
+  color: #000000;
+  &::placeholder {
+    opacity: 1;
+  }
+}

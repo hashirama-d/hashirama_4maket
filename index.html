@@ -13,45 +13,73 @@
 </head>
 
 <body>
+
 <div class="placeholder"></div>
-<header class="header">
-    <div class="container">
-        <div class="header__inner">
-            <div class="header__content">
-                <a class="header__logo" href="#"><img src="images/logo_Oxit.png" alt="Логотип школи програмування OxIT"></a>
-                <button class="menu__btn"></button>
+<main>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__content">
+                    <a class="header__logo" href="#"><img src="images/logo_Oxit.png" alt="Логотип школи програмування OxIT"></a>
+                    <button class="menu__btn"></button>
+                </div>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="#enroll" class="menu__item-link">Головна</a></li>
+                        <li class="menu__item"><a href="#" class="menu__item-link">Програма курсу</a></li>
+                        <li class="menu__item"><a href="#" class="menu__item-link">Відгуки про курс</a></li>
+                        <li class="menu__item"><a href="#" class="menu__item-link">Відео</a></li>
+                        <li class="menu__item"><a href="#" class="menu__item-link">Ментори</a></li>
+                        <li class="menu__item apply-link"><a href="#" class="menu__item-link ">Подати заявку</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="menu">
-                <ul class="menu__list">
-                    <li class="menu__item"><a href="#enroll" class="menu__item-link">Головна</a></li>
-                    <li class="menu__item"><a href="#" class="menu__item-link">Програма курсу</a></li>
-                    <li class="menu__item"><a href="#" class="menu__item-link">Відгуки про курс</a></li>
-                    <li class="menu__item"><a href="#" class="menu__item-link">Відео</a></li>
-                    <li class="menu__item"><a href="#" class="menu__item-link">Ментори</a></li>
-                    <li class="menu__item apply-link"><a href="#" class="menu__item-link ">Подати заявку</a></li>
-                </ul>
-            </nav>
         </div>
-    </div>
-</header>
+    </header>
+    <section class="enroll" id="enroll">
+        <div class="container">
+            <div class="enroll__inner">
+                <div class="enroll__left">
+                    <h1 class="enroll__title">Курси програмування в Луцьку</h1>
+                    <p class="enroll__description">Сфера IT розвивається максимально швидко. Зараз дуже популярно
+                        здобувати освіту, що пов'язана з ІТ. Існує лише одна проблема - брак дійсно кваліфікованих
+                        спеціалістів в Україні. Під час навчання в університеті ми отримуємо мало практики і "живих",
+                        реальних кейсів. ІТ школа ОхІТ створила таку методику навчання, при якій за короткий час ви
+                        отримаєте необхідні знанян, щоб стати ІТ спеціалістом. Чекаємо вас на наших курсах програмування
+                        в Луцьку. Старт наступного курсу 3 серпня. </p>
+                </div>
 
-<section class="enroll" id="enroll">
-    <div class="container">
-        <div class="enroll__inner">
-            <div class="enroll__left">
-                <h1 class="enroll__title">Курси програмування в Луцьку</h1>
-                <p class="enroll__description">Сфера IT розвивається максимально швидко. Зараз дуже популярно
-                    здобувати освіту, що пов'язана з ІТ. Існує лише одна проблема - брак дійсно кваліфікованих
-                    спеціалістів в Україні. Під час навчання в університеті ми отримуємо мало практики і "живих",
-                    реальних кейсів. ІТ школа ОхІТ створила таку методику навчання, при якій за короткий час ви
-                    отримаєте необхідні знанян, щоб стати ІТ спеціалістом. Чекаємо вас на наших курсах програмування
-                в Луцьку. Старт наступного курсу 3 серпня. </p>
+                <div class="enroll__right">
+                    <form action="" method="post" class="enroll__form">
+                        <label for="first-name">Ім'я</label><br>
+                        <input type="text" name="first-name" id="first-name" class="enroll__form-input" required
+                               placeholder="Ім'я"><br>
+                        <label for="last-name">Прізвище</label><br>
+                        <input type="text" name="last-name" id="last-name" class="enroll__form-input" required
+                               placeholder="Прізвище"><br>
+                        <label for="point-of-interest">Мене більше цікавить</label><br>
+                        <input type="text" name="point-of-interest" id="point-of-interest" class="enroll__form-input"
+                               required placeholder="developer or QA"><br>
+                        <label for="phone-number">Номер телефону</label><br>
+                        <input type="tel" name="phone-number" id="phone-number" class="enroll__form-input" required
+                               placeholder="+38 XXX XX XX XXX"><br>
+                        <label for="email">Email</label><br>
+                        <input type="email" name="email" id="email" class="enroll__form-input" required
+                               placeholder="Email"><br>
+                        <input type="checkbox" class="enroll__form-input" name="confidentional-policy"
+                               id="confidentional-policy" required>
+                        <label for="confidentional-policy">Я погоджуюся з політикою конфіденційності </label><br>
+
+                        <input type="submit" value="Зареєструватися зараз">
+                    </form>
+                </div>
             </div>
-
-            <div class="enroll__right"></div>
         </div>
-    </div>
-</section>
+    </section>
+</main>
+
+
+
 
 <script src="js/index.js"></script>
 
