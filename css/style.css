@@ -157,9 +157,7 @@ body {
   }
 }
 .menu__item {
-  padding: 15px 20px;
-  font-size: 16px;
-  line-height: 16px;
+  padding: 15px 0;
 }
 @media (max-width: 980px) {
   .menu__item {
@@ -167,6 +165,11 @@ body {
     font-size: 14px;
     line-height: 14px;
   }
+}
+.menu__item-link {
+  padding: 15px 20px;
+  font-size: 16px;
+  line-height: 16px;
 }
 .menu__item:hover {
   background-color: #eeeeee;
