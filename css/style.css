@@ -332,6 +332,10 @@ body {
   height: 50px;
   width: 100%;
 }
+.enroll__form-input[type=text]:focus, .enroll__form-input[type=tel]:focus, .enroll__form-input[type=email]:focus {
+  border-color: #66afe9;
+  box-shadow: 0 0 2px 2px rgba(102, 175, 233, 0.5);
+}
 .enroll__form-input::-moz-placeholder {
   font-family: "Open Sans";
 }
