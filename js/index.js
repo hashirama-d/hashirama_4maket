@@ -2,8 +2,6 @@ const menuBtn = document.querySelector(".menu__btn");
 const menuList = document.querySelector(".menu__list");
 const menuLinks = document.querySelectorAll(".menu__item-link");
 
-const siteBuildingItems = document.querySelectorAll(".site-building__content-item");
-
 //  Тригер кнопки для бургер-меню
 menuBtn.addEventListener("click", () => {
     menuList.classList.toggle("menu__list_enabled");
@@ -24,12 +22,6 @@ menuLinks.forEach( menuLink => {
         });
     })
 })
-
-if (siteBuildingItems.length > 3) {
-    console.log('slider');
-} else {
-    console.log('no slider');
-}
 
 $(document).ready(function(){
     $('.site-building__content').slick({
