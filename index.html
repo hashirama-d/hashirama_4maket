@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/style.css">
 
     <title>OxIT - Oxygen for IT</title>
-
 </head>
 
 <body>
@@ -51,26 +50,45 @@
 
                 <div class="enroll__right">
                     <form action="" method="post" class="enroll__form">
-                        <label for="first-name">Ім'я</label><br>
-                        <input type="text" name="first-name" id="first-name" class="enroll__form-input" required
-                               placeholder="Ім'я"><br>
-                        <label for="last-name">Прізвище</label><br>
-                        <input type="text" name="last-name" id="last-name" class="enroll__form-input" required
-                               placeholder="Прізвище"><br>
-                        <label for="point-of-interest">Мене більше цікавить</label><br>
-                        <input type="text" name="point-of-interest" id="point-of-interest" class="enroll__form-input"
-                               required placeholder="developer or QA"><br>
-                        <label for="phone-number">Номер телефону</label><br>
-                        <input type="tel" name="phone-number" id="phone-number" class="enroll__form-input" required
-                               placeholder="+38 XXX XX XX XXX"><br>
-                        <label for="email">Email</label><br>
-                        <input type="email" name="email" id="email" class="enroll__form-input" required
-                               placeholder="Email"><br>
-                        <input type="checkbox" class="enroll__form-input" name="confidentional-policy"
-                               id="confidentional-policy" required>
-                        <label for="confidentional-policy">Я погоджуюся з політикою конфіденційності </label><br>
+                        <h3 class="enroll__form-title">Зареєструватись на курси</h3>
+                        <div class="enroll__form-field">
+                            <label for="first-name" class="enroll__form-label required">Ім'я</label><br>
+                            <input type="text" name="first-name" id="first-name" class="enroll__form-input" required
+                                   placeholder="Ім'я" pattern="^\p{L}+$"><br>
+                        </div>
+                        <div class="enroll__form-field">
+                            <label for="last-name" class="enroll__form-label required">Прізвище</label><br>
+                            <input type="text" name="last-name" id="last-name" class="enroll__form-input" required
+                                   placeholder="Прізвище" pattern="^\p{L}+$"><br>
+                        </div>
+                        <div class="enroll__form-field">
+                            <label for="point-of-interest" class="enroll__form-label required">Мене більше
+                                цікавить</label><br>
+                            <input type="text" name="point-of-interest" id="point-of-interest" class="enroll__form-input"
+                                   required placeholder="developer or QA" pattern="^\p{L}+$"><br>
+                        </div>
+                        <div class="enroll__form-field">
+                            <label for="phone-number" class="enroll__form-label required">Номер телефону</label><br>
+                            <input type="tel" name="phone-number" id="phone-number" class="enroll__form-input" required
+                                   placeholder="+38 XXX XX XX XXX" pattern="^\+38\d{8}$"><br>
+                        </div>
+                        <div class="enroll__form-field">
+                            <label for="email" class="enroll__form-label required">Email</label><br>
+                            <input type="email" name="email" id="email" class="enroll__form-input" required
+                                   placeholder="Email"><br><br>
+                        </div>
+                        <div class="enroll__form-field confidentional-policy-field">
+                            <input type="checkbox" class="enroll__form-input" name="confidentional-policy"
+                                   id="confidentional-policy" required>
+                            <label for="confidentional-policy" class="enroll__form-label required">Я погоджуюся iз
+                                <a href="#" class="confidentional-policy-link">Політикою
+                                    конфіденційності</a>
+                            </label><br><br>
+                        </div>
 
-                        <input type="submit" value="Зареєструватися зараз">
+                        <input type="submit" value="Зареєструватися зараз" class="enroll__form-submit-btn">
+
+
                     </form>
                 </div>
             </div>
