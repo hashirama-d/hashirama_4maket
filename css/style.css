@@ -48,22 +48,32 @@ input::placeholder {
 @font-face {
   font-family: "Open Sans";
   font-weight: 400;
+  font-style: normal;
   src: url("../fonts/static/OpenSans-Regular.ttf");
 }
 @font-face {
   font-family: "Open Sans";
   font-weight: 700;
+  font-style: normal;
   src: url("../fonts/static/OpenSans-Bold.ttf");
 }
 @font-face {
   font-family: "Open Sans";
   font-weight: 600;
+  font-style: normal;
   src: url("../fonts/static/OpenSans-SemiBold.ttf");
 }
 @font-face {
   font-family: "Open Sans";
   font-weight: 300;
+  font-style: normal;
   src: url("../fonts/static/OpenSans-Light.ttf");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-style: italic;
+  src: url("../fonts/static/OpenSans-LightItalic.ttf");
 }
 body {
   font-family: "Open Sans";
@@ -393,6 +403,7 @@ body {
   font-weight: 400;
   margin: 60px 0 40px;
   color: #333333;
+  text-align: center;
 }
 @media (max-width: 440px) {
   .site-building__title {
@@ -438,6 +449,25 @@ body {
   font-weight: 300;
   line-height: 28px;
 }
+.site-building .slick-dots {
+  width: inherit;
+  position: absolute;
+  bottom: -50px;
+}
+.site-building .slick-dots li.slick-active button {
+  background-color: #666666;
+}
+.site-building .slick-dots button {
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #b3b3b3;
+  border-radius: 50%;
+  margin: 0 7px;
+  border: none;
+  outline: none;
+}
+
 .slick-track {
   display: flex;
   padding: 0;
@@ -448,12 +478,9 @@ body {
   padding: 0 !important;
 }
 .slick-dots {
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: inherit;
-  bottom: -50px;
 }
 .slick-dots li.slick-active button {
   background-color: #666666;
@@ -508,5 +535,137 @@ body {
   .statistics__item-description {
     font-size: 12px;
   }
+}
+
+.testimonials__title {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 60px 0 40px;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 0;
+}
+@media (max-width: 440px) {
+  .testimonials__title {
+    font-size: 24px;
+  }
+}
+.testimonials__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 150px;
+}
+.testimonials__item {
+  padding: 40px 45px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1000px;
+}
+@media (max-width: 720px) {
+  .testimonials__item {
+    padding: 40px 30px 0;
+  }
+}
+@media (max-width: 720px) {
+  .testimonials__item {
+    padding: 40px 20px 0;
+  }
+}
+.testimonials__item-text {
+  position: relative;
+  font-weight: 300;
+  padding: 0 5px;
+  font-size: 22px;
+  line-height: 36px;
+  margin-bottom: 40px;
+}
+@media (max-width: 980px) {
+  .testimonials__item-text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 720px) {
+  .testimonials__item-text {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 440px) {
+  .testimonials__item-text {
+    line-height: 25px;
+  }
+}
+.testimonials__item-text::before, .testimonials__item-text::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+@media (max-width: 720px) {
+  .testimonials__item-text::before, .testimonials__item-text::after {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media (max-width: 440px) {
+  .testimonials__item-text::before, .testimonials__item-text::after {
+    width: 20px;
+    height: 20px;
+  }
+}
+.testimonials__item-text::before {
+  top: -25px;
+  left: -45px;
+  background-image: url("../images/icons/quote-left.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 720px) {
+  .testimonials__item-text::before {
+    left: -20px;
+    top: -15px;
+  }
+}
+@media (max-width: 440px) {
+  .testimonials__item-text::before {
+    top: 0;
+  }
+}
+.testimonials__item-text::after {
+  bottom: 0;
+  right: -45px;
+  background-image: url("../images/icons/quote-right.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 720px) {
+  .testimonials__item-text::after {
+    right: -20px;
+    bottom: 10px;
+  }
+}
+.testimonials__item-person {
+  display: block;
+  color: #333333;
+}
+.testimonials__item-occupation {
+  font-weight: 300;
+  font-style: italic;
+}
+.testimonials .slick-slide {
+  display: flex;
+  justify-content: center;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.testimonials .slick-dots {
+  width: 100%;
+  position: absolute;
+  bottom: -115px;
 }
 /*# sourceMappingURL=style.css.map */
