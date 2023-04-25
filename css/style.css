@@ -105,7 +105,7 @@ body {
 .header {
   position: fixed;
   top: 0;
-  z-index: 100;
+  z-index: 1010;
   width: 100%;
   background-color: #ffffff;
 }
@@ -405,9 +405,15 @@ body {
   color: #333333;
   text-align: center;
 }
+@media (max-width: 720px) {
+  .site-building__title {
+    margin: 50px 0 30px;
+  }
+}
 @media (max-width: 440px) {
   .site-building__title {
     font-size: 24px;
+    margin: 35px 0 20px;
   }
 }
 .site-building__content {
@@ -545,9 +551,15 @@ body {
   text-align: center;
   margin-bottom: 0;
 }
+@media (max-width: 720px) {
+  .testimonials__title {
+    margin: 50px 0 30px;
+  }
+}
 @media (max-width: 440px) {
   .testimonials__title {
     font-size: 24px;
+    margin: 35px 0 20px;
   }
 }
 .testimonials__content {
@@ -667,5 +679,84 @@ body {
   width: 100%;
   position: absolute;
   bottom: -115px;
+}
+
+.video {
+  background-color: #f7f7f7;
+}
+.video__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.video__title {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 60px 0 40px;
+  color: #333333;
+  text-align: center;
+  padding-top: 1px;
+}
+@media (max-width: 720px) {
+  .video__title {
+    margin: 50px 0 30px;
+  }
+}
+@media (max-width: 440px) {
+  .video__title {
+    font-size: 24px;
+    margin: 35px 0 20px;
+  }
+}
+.video__text {
+  min-height: 10px;
+  font-weight: 300;
+  padding: 0 5px;
+  font-size: 22px;
+  line-height: 28px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+@media (max-width: 980px) {
+  .video__text {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+@media (max-width: 720px) {
+  .video__text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 440px) {
+  .video__text {
+    line-height: 20px;
+  }
+}
+.video__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.video__video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1020px;
+  height: 420px;
+  margin-bottom: 65px;
+}
+@media (max-width: 720px) {
+  .video__video-wrapper {
+    height: 305px;
+  }
+}
+@media (max-width: 440px) {
+  .video__video-wrapper {
+    height: 195px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
