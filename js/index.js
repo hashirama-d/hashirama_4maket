@@ -51,12 +51,22 @@ $(document).ready(function(){
         ]
     });
     $('.testimonials__content').slick({
-        adaptiveHeight: true,
+        // adaptiveHeight: true,
         arrows: false,
         dots: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,
+        autoplay: true,
+        autoplaySpeed: 10000,
+    });
+    $('.mentors__content').slick({
+        // adaptiveHeight: true,
+        arrows: false,
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        // fade: true,
         autoplay: true,
         autoplaySpeed: 10000,
     });

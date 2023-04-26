@@ -1,20 +1,35 @@
 .mentors {
-  background-color: $section-bg;
+  background-color: #ffffff;
+  &__title {
+    @include section-title();
+    margin-bottom: 20px;
+  }
   &__content {
+    position: relative;
+    margin-bottom: 75px;
+    & hr {
+      border: 0;
+      border-top: 1px solid #f7f7f7;
+      @media (max-width: 720px) {
+        margin-top: 0;
+      }
+    }
     &-item {
-      display: flex;
+      display: flex!important;
       font-weight: 300;
       padding: 0 5px;
-      font-size: 18px;
-      line-height: 26px;
+      font-size: 16px;
+      line-height: 24px;
 
       @media (max-width: 980px) {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 22px;
       }
       @media (max-width: 720px) {
         font-size: 14px;
         line-height: 22px;
+        flex-direction: column;
+        text-align: center;
       }
       @media (max-width: 440px) {
         line-height: 18px;
@@ -22,6 +37,46 @@
         text-align: center;
 
       }
+    }
+  }
+  &__portrait {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 40%;
+    & img {
+      width: 337px;
+      height: 356px;
+      @media (max-width: 980px) {
+        width: 236px;
+        height: 250px;
+      }
+    }
+  }
+  &__name {
+    color: $accent-color-bright;
+    font-weight: 700;
+    padding-bottom: 15px;
+  }
+  &__text {
+    padding-top: 20px;
+
+  }
+  &__description {
+    padding-top: 15px;
+    &-paragraph {
+      padding-bottom: 15px;
+    }
+  }
+  .slick {
+    &-slide {
+      display: flex;
+      justify-content: center;
+    }
+    &-dots {
+      width: 100%;
+      position: absolute;
+      bottom: -25px;
     }
   }
 }
