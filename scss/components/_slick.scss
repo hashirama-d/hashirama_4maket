@@ -1,0 +1,32 @@
+/* Default styles for all sliders implemented by Slick Slider module */
+
+.slick {
+  &-track {
+    display: flex;
+    padding: 0;
+  }
+  &-list {
+    overflow: hidden;
+    min-width: 100%;
+    padding: 0;
+  }
+  &-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & li.slick-active button {
+      background-color: $slider-active-dot-color;
+    }
+    & button {
+      font-size: 0;
+      width: 12px;
+      height: 12px;
+      background-color: $slider-dot-color;
+      border-radius: 50%;
+      margin: 0 7px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}
