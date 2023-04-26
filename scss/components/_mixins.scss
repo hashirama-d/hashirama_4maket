@@ -1,3 +1,8 @@
+@mixin width_height($width, $height) {
+  width: $width;
+  height: $height;
+}
+
 @mixin font_size-lh-fw ($font-size, $line-height, $font-weight: 400) {
   font-size: $font-size;
   line-height: $line-height;
@@ -5,15 +10,14 @@
 }
 
 @mixin section-title() {
-  font-size: 30px;
-  font-weight: 400;
+  @include font_size-lh-fw(30px, 30px, 400);
   margin: 60px 0 40px;
   color: $heading-color;
   text-align: center;
-  @media (max-width: 720px) {
+  @media (max-width: $tablet-width) {
     margin: 50px 0 30px;
   }
-  @media (max-width: 440px) {
+  @media (max-width: $phone-width) {
     font-size: 24px;
     margin: 35px 0 20px;
   }

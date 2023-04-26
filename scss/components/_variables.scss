@@ -1,6 +1,26 @@
+/* Adaptive breakpoints */
+$content-width: 1220px;
+$laptop-width: 980px;
+$tablet-width: 720px;
+$phone-width: 440px;
+
+/* Fonts */
+$main-font: "Open Sans";
+
+/* Colors */
 $text-color: #787878;
+$text-on-accent-color: #ffffff;
+$input-text-color: #999999;
+$input-border-color: #bababa;
+$input-border-on-focus-color: #66afe9;
 $heading-color: #333333;
 $accent-color-dark: #337ab7;
 $accent-color-bright: #3498db;
 $section-bg: #f7f7f7;
-$content-width: 1220px;
+$slider-bg: #ffffff;
+$header-bg: #ffffff;
+$menu-link-hover-bg: #eeeeee;
+$slider-dot-color: #b3b3b3;
+$slider-active-dot-color: #666666;
+
+

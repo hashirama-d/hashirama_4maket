@@ -1,5 +1,5 @@
 .mentors {
-  background-color: #ffffff;
+  background-color: $slider-bg;
   &__title {
     @include section-title();
     margin-bottom: 20px;
@@ -10,28 +10,24 @@
     & hr {
       border: 0;
       border-top: 1px solid #f7f7f7;
-      @media (max-width: 720px) {
+      @media (max-width: $tablet-width) {
         margin-top: 0;
       }
     }
     &-item {
-      display: flex!important;
-      font-weight: 300;
+      display: flex!important;  // Slick slider module gives an inline style of 'display: inline-block' for
+                                // every slider item, thus ruining the structure of slide. !important is used
+                                // to keep slider item structure.
       padding: 0 5px;
-      font-size: 16px;
-      line-height: 24px;
-
-      @media (max-width: 980px) {
-        font-size: 14px;
-        line-height: 22px;
+      @include font_size-lh-fw(16px, 24px, 300);
+      @media (max-width: $laptop-width) {
+        @include font_size-lh-fw(14px, 22px, 300);
       }
-      @media (max-width: 720px) {
-        font-size: 14px;
-        line-height: 22px;
+      @media (max-width: $tablet-width) {
         flex-direction: column;
         text-align: center;
       }
-      @media (max-width: 440px) {
+      @media (max-width: $phone-width) {
         line-height: 18px;
         flex-direction: column;
         text-align: center;
@@ -45,11 +41,9 @@
     justify-content: center;
     min-width: 40%;
     & img {
-      width: 337px;
-      height: 356px;
-      @media (max-width: 980px) {
-        width: 236px;
-        height: 250px;
+      @include width_height(337px, 356px);
+      @media (max-width: $laptop-width) {
+        @include width_height(236px, 250px);
       }
     }
   }
@@ -60,7 +54,6 @@
   }
   &__text {
     padding-top: 20px;
-
   }
   &__description {
     padding-top: 15px;
@@ -68,11 +61,10 @@
       padding-bottom: 15px;
     }
   }
+
+  /* Slider styles for mentors section start here */
+
   .slick {
-    &-slide {
-      display: flex;
-      justify-content: center;
-    }
     &-dots {
       width: 100%;
       position: absolute;

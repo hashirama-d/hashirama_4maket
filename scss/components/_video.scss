@@ -7,25 +7,20 @@
   }
   &__title {
     @include section-title();
-    padding-top: 1px;
   }
   &__text {
     min-height: 10px;
-    font-weight: 300;
     padding: 0 5px;
-    font-size: 22px;
-    line-height: 28px;
     margin-bottom: 40px;
     text-align: center;
-    @media (max-width: 980px) {
-      font-size: 20px;
-      line-height: 26px;
+    @include font_size-lh-fw(22px, 28px, 300);
+    @media (max-width: $laptop-width) {
+      @include font_size-lh-fw(20px, 26px, 300);
     }
-    @media (max-width: 720px) {
-      font-size: 16px;
-      line-height: 22px;
+    @media (max-width: $tablet-width) {
+      @include font_size-lh-fw(16px, 22px, 300);
     }
-    @media (max-width: 440px) {
+    @media (max-width: $phone-width) {
       line-height: 20px;
     }
   }
@@ -33,19 +28,17 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    @include width_height(100%, 100%);
     border: none;
     &-wrapper {
       position: relative;
-      width: 100%;
       max-width: 1020px;
-      height: 420px;
+      @include width_height(100%, 420px);
       margin-bottom: 65px;
-      @media (max-width: 720px) {
+      @media (max-width: $tablet-width) {
         height: 305px;
       }
-      @media (max-width: 440px) {
+      @media (max-width: $phone-width) {
         height: 195px;
       }
     }
