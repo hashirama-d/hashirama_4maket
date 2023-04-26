@@ -1,0 +1,19 @@
+.footer {
+  background-color: $section-bg;
+  margin-top: auto;
+  &__inner {
+    font-weight: 300;
+    text-align: center;
+    padding: 50px 0;
+    & a {
+      color: $accent-color-bright;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__copyright {
+    display: block;
+    padding-bottom: 20px;
+  }
+}
