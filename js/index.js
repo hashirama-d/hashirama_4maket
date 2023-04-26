@@ -1,14 +1,15 @@
+// Queries for html elements
 const menuBtn = document.querySelector(".menu__btn");
 const menuList = document.querySelector(".menu__list");
 const menuLinks = document.querySelectorAll(".menu__item-link");
 
-//  Тригер кнопки для бургер-меню
+//  Listener for burger-menu button
 menuBtn.addEventListener("click", () => {
     menuList.classList.toggle("menu__list_enabled");
     menuBtn.classList.toggle("menu__btn_enabled");
 });
 
-//  Поведінка для посилань у меню
+//  Behaviour of menu links
 menuLinks.forEach( menuLink => {
     menuLink.addEventListener("click", event => {
         event.preventDefault();
@@ -23,35 +24,36 @@ menuLinks.forEach( menuLink => {
     })
 })
 
+// jQuery initialization
 $(document).ready(function(){
+    // Site-building slider init
     $('.site-building__content').slick({
         arrows: false,
         dots: true,
-        infinite: true,
+        infinite: false,
+        draggable: false,
         slidesToShow: 3,
         slidesToScroll: 3,
-        // centerMode: true,
         responsive: [
             {
                 breakpoint: 850,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
-                    infinite: false,
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
-                    infinite: false,
-                    centerMode: true,
+                    slidesToScroll: 1,
                 }
             },
         ]
     });
+
+    // Testimonials slider init
     $('.testimonials__content').slick({
-        // adaptiveHeight: true,
         arrows: false,
         dots: true,
         slidesToShow: 1,
@@ -59,15 +61,17 @@ $(document).ready(function(){
         fade: true,
         autoplay: true,
         autoplaySpeed: 10000,
+        draggable: false,
     });
+
+    // Mentors slider init
     $('.mentors__content').slick({
-        // adaptiveHeight: true,
         arrows: false,
         dots: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        // fade: true,
         autoplay: true,
         autoplaySpeed: 10000,
+        draggable: false,
     });
 });
