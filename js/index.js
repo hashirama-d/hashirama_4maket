@@ -31,7 +31,7 @@ $(document).ready(function(){
         arrows: false,
         dots: true,
         infinite: false,
-        draggable: false,
+        draggable: true,
         slidesToShow: 3,
         slidesToScroll: 3,
         responsive: [
@@ -61,7 +61,7 @@ $(document).ready(function(){
         fade: true,
         autoplay: true,
         autoplaySpeed: 10000,
-        draggable: false,
+        draggable: true,
     });
 
     // Mentors slider init
@@ -72,6 +72,6 @@ $(document).ready(function(){
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 10000,
-        draggable: false,
+        draggable: true,
     });
 });
