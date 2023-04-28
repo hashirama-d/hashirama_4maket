@@ -1,4 +1,4 @@
-.placeholder, .header {
+.placeholder {
   @include width_height(100%, 100px);
   @media (max-width: $tablet-width) {
     height: 70px;
@@ -10,8 +10,8 @@
   top: 0;
   z-index: 1010; // Header needs to be above sliders with fade effect, which have a default value of 1000
   width: 100%;
-  background-color: $header-bg;
   &__inner {
+    background-color: $header-bg;
     width: 100%;
     display: flex;
     justify-content: space-between;
